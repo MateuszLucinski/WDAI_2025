@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Mateusz Lucinski" />
+    <meta name="keywords" content="WWW;rogale;marcinskie;cukiernia" />
+    <meta name="Description" content="Strona domowa Cukierni AleRogale" />
+    <title>Rogale Marcińskie</title>
+    <link rel="icon" type="image/x-icon" href="photos/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- navigation -->
+      <nav id="navContainer">
+        <nav class="navi"><a href="index.html">Strona głowna</a></nav>
+        <nav class="navi"><a href="gallery.html">Galeria</a></nav>
+        <nav class="navi">
+          <a
+            href="https://www.poznan.pl/mim/wortals/swmarcin/przepis-na-rogala-marcinskiego-pisany-gwara-poznanska,p,221,8987,16209.html"
+            >Domowy przepis</a
+          >
+        </nav>
+        <nav class="navi"><a></a></nav>
+        <nav class="navi"><a href="contact.html">Kontakt</a></nav>
+        <nav class="navi">
+          <a href="https://www.facebook.com/Poznan?locale=pl_PL"
+            ><img class="social" src="photos/fb.png" alt="Nasz facebok"
+          /></a>
+        </nav>
+        <nav class="navi">
+          <a href="https://www.instagram.com/miastopoznan_/"
+            ><img class="social" src="photos/ig.png" alt="Nasz instagram"
+          /></a>
+        </nav>
+      </nav>
+
+      <!-- page title with paralax background -->
+      <section id="page-title">
+        <h1 class="tit1">
+          Zamów <br />
+          rogale
+        </h1>
+        <a href="#formul" class="button-frame">Formularz</a>
+      </section>
+    </header>
+
+    <main>
+      <!-- 50 50 responsive container -->
+      <section id="formul" class="content-container">
+        <figure class="side">
+          <img src="photos/order.jpg" alt="Więcej rogali :D" />
+        </figure>
+        <section id="ord">
+          <h1>Wypenij dane</h1>
+          
+          <!-- form for placing order -->
+          <form action="" method="post" id="order">
+            <label>Imię i nazwisko</label><br />
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Jan Kowalski"
+              maxlength="50"
+              required
+            /><br /><br />
+            <label>Adres</label><br />
+            <input
+              type="text"
+              id="address"
+              placeholder="ul. Wesoła 24/7, 60-001 Poznań"
+              maxlength="100"
+              required
+            /><br /><br />
+            <label>Adres e-mail</label><br />
+            <input
+              type="text"
+              id="email"
+              placeholder="jan.kowalski@example.com"
+              maxlength="50"
+              required
+            /><br /><br />
+            <label>Ilość:</label>
+            <input
+              type="number"
+              id="quantity"
+              min="0"
+              max="100"
+              required
+            /><br /><br />
+
+            <label>Wysyłka:</label>
+            <select id="shipping">
+              <option value="paczkomat">Paczkomat</option>
+              <option value="kurier">Kuirer</option>
+              <option value="osobisty">Odbiór osobisty</option>
+            </select>
+            <br /><br />
+
+            <label>Płatność</label><br />
+            <input type="radio" name="payment" id="blik" checked />
+            <label>Blik</label><br />
+            <input type="radio" name="payment" id="przelewy24" />
+            <label>Przelewy24</label><br />
+            <input type="radio" name="payment" id="tradycyjny" />
+            <label>Przelew tradycyjny</label><br /><br />
+
+            <textarea id="comment" placeholder="Uwagi"></textarea><br /><br />
+
+            <input type="submit" value="Złóż zamówienie" />
+          </form>
+        </section>
+      </section>
+
+      <!-- separate hidden section for displaying valid order details -->
+      <section id="summary">
+        <h1>Podsumowanie zamówienia</h1>
+        <p id="sumName"></p>
+        <p id="sumAddress"></p>
+        <p id="sumEmail"></p>
+        <p id="sumQty"></p>
+        <p id="sumPrice"></p>
+        <p id="sumComment"></p>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 Mateusz Luciński</footer>
+  </body>
+</html>
