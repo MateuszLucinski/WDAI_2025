@@ -112,6 +112,13 @@ section.imagebox {
   align-content: center;
 }
 
+/* for displaying video files */
+section.video{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+}
+
 /* form container */
 section#ord {
   padding-left: 10%;
@@ -185,6 +192,10 @@ img.four-elem {
   width: 96%;
 }
 
+video {
+  max-width: 100%;
+}
+
 footer {
   padding: 50px;
   background-color: black;
@@ -254,5 +265,11 @@ input[type="submit"]:hover {
 
   figure.side {
     margin: 10%;
+  }
+
+  section.video {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
   }
 }
